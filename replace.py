@@ -27,6 +27,9 @@ def replace(originalfile, n0, n):
             else:
                 updated_lines.append(line)
 
-    with open('R_80_25_1,03.inp', 'w') as newfile:
+#     with open('R_80_25_1,03.inp', 'w') as newfile:
+    name = str(n)
+    queue = name.replace(".", "")
+    with open("R_80_25_1,"+queue+".inp", 'w') as newfile:  
         for line in updated_lines:
             newfile.write(line)
